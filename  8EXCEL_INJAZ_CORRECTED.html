@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>إكسل وانجاز للمقاولات | Excel & Injaz Contracting</title>
+<meta name="description" content="إكسل وانجاز للمقاولات - أعمال الحديد والهياكل والأسوار والسلالم والهاندريل وتأسيس هياكل المصاعد.">
+<style>
+:root{
+  --bg:#061118;--bg2:#091a23;--card:#0d202a;--ink:#f5f7f8;
+  --muted:#a8b7bd;--accent:#d6b15e;--line:#223943
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif}
+.hero{
+  min-height:100vh;display:grid;place-items:center;text-align:center;padding:40px 22px;
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(214,177,94,.08),transparent 36%),
+    linear-gradient(180deg,rgba(4,14,20,.45),rgba(4,14,20,.96)),
+    url("https://iqrorwxhpikllr5q.ldycdn.com/cloud/pkBpiKlkRllSlknirjmpj/Image_2025-08-18_161030_191.jpg") center/cover
+}
+.hero:after{content:"";position:absolute;inset:20px;border:1px solid rgba(214,177,94,.34);pointer-events:none}
+.hero::before{
+  content:"X";position:absolute;left:50%;top:49%;transform:translate(-50%,-50%);
+  font-family:Arial,Helvetica,sans-serif;font-size:clamp(340px,55vw,860px);font-weight:900;
+  line-height:.8;color:rgba(214,177,94,.055);pointer-events:none;user-select:none;z-index:0
+}
+.brand{position:relative;z-index:2;max-width:1000px}
+.kicker{font-size:13px;letter-spacing:4px;color:var(--accent);font-weight:800;margin-bottom:22px}
+.logo{font-size:clamp(48px,8vw,94px);font-weight:900;letter-spacing:-2px;margin:0}
+.logo b{color:var(--accent)}
+.eng-logo{font-size:clamp(18px,2.5vw,28px);font-weight:800;letter-spacing:3px;margin-top:12px}
+.tag{font-size:clamp(20px,2.4vw,30px);font-weight:800;margin:26px 0 0}
+.tag-en{font-size:16px;color:#d6dde0;margin-top:7px;letter-spacing:.6px}
+.sub{max-width:820px;margin:20px auto 0;color:#d4dde1;line-height:2;font-size:17px}
+.sub-en{max-width:820px;margin:5px auto 0;color:#9fb0b7;line-height:1.8;font-size:14px;direction:ltr}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.hero-actions a{padding:13px 20px;text-decoration:none;border:1px solid rgba(214,177,94,.55);color:var(--ink);font-weight:700}
+.hero-actions a:first-child{background:var(--accent);color:#0a1419}
+.scroll{position:absolute;bottom:40px;z-index:2;color:var(--muted);font-size:12px}
+section{max-width:1180px;margin:auto;padding:92px 22px}
+.eyebrow{color:var(--accent);font-weight:800;letter-spacing:1px}
+.eyebrow-en{color:#8da0a7;font-size:12px;letter-spacing:2px;margin-top:5px;text-transform:uppercase}
+.title{font-size:clamp(32px,5vw,56px);margin:12px 0 10px}
+.title-en{font-size:18px;color:#c8d2d6;font-weight:600;direction:ltr}
+.lead{color:var(--muted);line-height:2;max-width:840px;margin-top:20px}
+.lead-en{color:#879aa2;line-height:1.8;max-width:840px;direction:ltr;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:42px}
+.work{position:relative;border:1px solid var(--line);overflow:hidden;background:#10232d;display:flex;flex-direction:column;min-width:0}
+.work img{display:block;width:100%;height:360px;object-fit:cover;position:relative;inset:auto;transition:.35s}
+.work:hover img{transform:scale(1.015)}
+.work:after{display:none}
+.cap{position:relative;z-index:2;right:auto;left:auto;bottom:auto;padding:24px 25px 27px;background:linear-gradient(180deg,#0d202a,#091820)}
+.cap h3{font-size:27px;margin:0 0 6px}
+.cap .en{font-size:13px;color:var(--accent);direction:ltr;text-align:right;margin-bottom:8px}
+.cap p{margin:0;color:#d3dde1;line-height:1.8}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:38px}
+.service{background:linear-gradient(145deg,#0e222c,#0a1820);border:1px solid var(--line);padding:26px 22px;min-height:170px;transition:.25s}
+.service:hover{transform:translateY(-3px);border-color:rgba(214,177,94,.55)}
+.num{color:var(--accent);font-size:12px;font-weight:bold;letter-spacing:2px}
+.service h3{margin:24px 0 5px;font-size:20px}
+.service p{margin:0;color:#8fa1a8;font-size:12px;direction:ltr}
+.statement{max-width:none;background:linear-gradient(120deg,#0a1921,#0d222c);border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.statement:before{content:"X";position:absolute;left:4%;top:50%;transform:translateY(-50%);font-size:360px;font-weight:900;color:rgba(214,177,94,.035);font-family:Arial}
+.statement .inner{max-width:1180px;margin:auto;padding:92px 22px;position:relative}
+.quote{font-size:clamp(30px,5vw,54px);font-weight:900;max-width:980px;line-height:1.45;margin:0}
+.quote-en{font-size:18px;color:#a8b7bd;direction:ltr;max-width:850px;margin-top:20px;line-height:1.7}
+.contact{text-align:center;padding-bottom:105px}
+.contactbox{border:1px solid rgba(214,177,94,.48);padding:54px 24px;background:linear-gradient(135deg,#0e222c,#08171e);position:relative;overflow:hidden}
+.contactbox:before{content:"X";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:330px;font-weight:900;color:rgba(214,177,94,.025);font-family:Arial}
+.contactbox>*{position:relative}
+.contact h2{font-size:clamp(32px,5vw,52px);margin:8px 0 8px}
+.contact .en-title{direction:ltr;color:#c4ced2;font-size:18px;font-weight:700}
+.contact p{color:var(--muted);line-height:1.9}
+.details{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:30px}
+.details a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:6px}
+footer{text-align:center;padding:30px;border-top:1px solid var(--line);color:#81949c;font-size:13px}
+footer .en{direction:ltr;margin-top:5px;font-size:11px}
+.cr{margin-top:9px;font-size:12px;color:#8fa0a8}
+@media(max-width:820px){.services{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){
+  .grid{grid-template-columns:1fr;gap:22px}.work{min-height:0}.work img{height:280px}.hero:after{inset:10px}
+  .hero::before{font-size:80vw;color:rgba(214,177,94,.065)}
+}
+@media(max-width:500px){.services{grid-template-columns:1fr}.details{flex-direction:column;gap:16px}.kicker{letter-spacing:2px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="brand">
+    <div class="kicker">STEEL • FABRICATION • CONTRACTING</div>
+    <h1 class="logo">إكسل وانجاز</h1>
+    <div class="eng-logo">EXCEL & INJAZ CONTRACTING</div>
+    <div class="tag">حلول متكاملة في أعمال الحديد والمقاولات المعدنية</div>
+    <div class="tag-en">Integrated Steel & Metal Contracting Solutions</div>
+    <p class="sub">تنفيذ احترافي، دقة في التفاصيل، والتزام بمعايير الجودة في المشاريع السكنية والتجارية والإنشائية.</p>
+    <p class="sub-en">Professional execution, precise detailing, and reliable quality for residential, commercial, and construction projects.</p>
+</div>
+  <div class="scroll">استعرض الأعمال ↓ &nbsp; | &nbsp; Explore Our Works</div>
+</header>
+
+<section id="works">
+  <div class="eyebrow">مجالات التنفيذ</div>
+  <div class="eyebrow-en">Execution Capabilities</div>
+  <h2 class="title">الحديد… من الهيكل إلى أدق التفاصيل</h2>
+  <div class="title-en">Steel Works From Structure to Final Detail</div>
+  <p class="lead">ننفذ أعمال الحديد وفق متطلبات المشروع والمخططات، مع التركيز على المتانة، دقة التصنيع، جودة التركيب، ونظافة التشطيب.</p>
+  <p class="lead-en">We execute steel works according to project requirements and drawings, focusing on durability, fabrication accuracy, installation quality, and clean finishing.</p>
+
+  <div class="grid">
+    <article class="work">
+      <img src="https://iqrorwxhpikllr5q.ldycdn.com/cloud/pkBpiKlkRllSlknirjmpj/Image_2025-08-18_161030_191.jpg" alt="هياكل حديدية">
+      <div class="cap"><h3>الهياكل الحديدية</h3><div class="en">Steel Structures</div><p>تصنيع وتركيب الهياكل والأعمال الإنشائية المعدنية.</p></div>
+    </article>
+    <article class="work">
+      <img src="https://ktc-steel.com/wp-content/uploads/2021/01/WhatsApp-Image-2020-12-31-at-7.49.08-AM-2.jpeg" alt="سلالم حديدية">
+      <div class="cap"><h3>السلالم والهاندريل</h3><div class="en">Steel Stairs & Handrails</div><p>حلول عملية ومتينة للمشاريع بمختلف أنواعها.</p></div>
+    </article>
+    <article class="work">
+      <img src="https://static1.s123-cdn-static-a.com/uploads/5773528/2000_644604b789eee.jpg" alt="أسوار حديدية">
+      <div class="cap"><h3>الأسوار والبوابات</h3><div class="en">Fences & Gates</div><p>تنفيذ الأسوار والبوابات والحواجز المعدنية حسب متطلبات الموقع.</p></div>
+    </article>
+    <article class="work">
+      <img src="https://www.ferronex.com/uploadfile/2025/03/18/20250318161931ONKU1k.jpg" alt="هيكل مصعد">
+      <div class="cap"><h3>تأسيس هياكل المصاعد</h3><div class="en">Elevator Steel Structures</div><p>تجهيز وتنفيذ الهياكل الحديدية المرتبطة بأعمال المصاعد.</p></div>
+    </article>
+  </div>
+</section>
+
+<div class="statement">
+  <div class="inner">
+    <div class="eyebrow">إكسل وانجاز</div>
+    <div class="eyebrow-en">Excel & Injaz</div>
+    <p class="quote">نبني أعمالًا حديدية قوية، مرتبة، ومصممة لتخدم المشروع بكفاءة وثبات.</p>
+    <p class="quote-en">We build strong, precise, and reliable steel solutions engineered to perform and last.</p>
+  </div>
+</div>
+
+<section>
+  <div class="eyebrow">خدماتنا</div>
+  <div class="eyebrow-en">Our Services</div>
+  <h2 class="title">قدرات تنفيذية أوسع</h2>
+  <div class="title-en">Comprehensive Steel Work Capabilities</div>
+  <div class="services">
+    <div class="service"><span class="num">01</span><h3>تأسيس هياكل المصاعد</h3><p>Elevator Steel Structures</p></div>
+    <div class="service"><span class="num">02</span><h3>الهياكل والمنشآت الحديدية</h3><p>Steel Structures</p></div>
+    <div class="service"><span class="num">03</span><h3>السلالم الحديدية</h3><p>Steel Stairs</p></div>
+    <div class="service"><span class="num">04</span><h3>الهاندريل والدرابزين</h3><p>Handrails & Balustrades</p></div>
+    <div class="service"><span class="num">05</span><h3>الأسوار الحديدية</h3><p>Steel Fences</p></div>
+    <div class="service"><span class="num">06</span><h3>البوابات الحديدية</h3><p>Steel Gates</p></div>
+    <div class="service"><span class="num">07</span><h3>المظلات والهناجر</h3><p>Canopies & Hangars</p></div>
+    <div class="service"><span class="num">08</span><h3>دور الميزانين والملاحق</h3><p>Mezzanine Floors</p></div>
+    <div class="service"><span class="num">09</span><h3>قواعد وحوامل المعدات</h3><p>Equipment Supports</p></div>
+    <div class="service"><span class="num">10</span><h3>القص واللحام والتشكيل</h3><p>Cutting, Welding & Forming</p></div>
+    <div class="service"><span class="num">11</span><h3>التدعيمات والتعديلات الحديدية</h3><p>Steel Reinforcement & Modifications</p></div>
+    <div class="service"><span class="num">12</span><h3>التصنيع حسب المخططات</h3><p>Custom Fabrication as per Drawings</p></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contactbox">
+    <div class="eyebrow">التواصل</div>
+    <div class="eyebrow-en">Contact</div>
+    <h2>جاهزون لدراسة متطلبات مشروعكم</h2>
+    <div class="en-title">Ready to Review Your Project Requirements</div>
+    <p>يسعدنا استقبال نطاق العمل والمخططات وطلبات التسعير.</p>
+    <div class="details">
+      <a href="tel:+966551889096">مسؤول المشاريع: 0551889096</a>
+      <a href="https://wa.me/966554726980">واتساب: 0554726980</a>
+      <a href="mailto:excel1lnjaz@gmail.com">excel1lnjaz@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© إكسل وانجاز للمقاولات — جميع الحقوق محفوظة</div>
+  <div class="en">© Excel & Injaz Contracting — All Rights Reserved</div>
+  <div class="cr">السجل التجاري: 7038272063</div>
+</footer>
+
+</body>
+</html>
